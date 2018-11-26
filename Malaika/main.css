@@ -1696,10 +1696,12 @@ blockquote p{
     }
 }
 .contact{
-    background-color:bg-base-color
+    background-color:bg-base-color;
+    text-align: center;
 }
 .contact .section-content{
-    color:#663300
+    color:#663300;
+    text-align: center;
 }
 .contact .section-content h5{
     margin-bottom:30px;
