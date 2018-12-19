@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="./Malaika/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     <script src="./jquery.mb.YTPlayer.js"></script>
+    <script src="assets/apikey.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Malaika Website">
@@ -39,16 +40,358 @@
     <script type="text/javascript" charset="UTF-8" src="./Malaika/map.js"></script>
     <script type="text/javascript" charset="UTF-8" src="./Malaika/marker.js"></script>
     <script type="text/javascript" charset="UTF-8" src="./Malaika/controls.js"></script>
-    <style type="text/css">
-        .gm-style {
-            font: 400 11px Nexa light, Arial, sans-serif;
-            text-decoration: none;
+    
+    <style>
+
+        *:focus{
+          outline: none;
         }
-        
-        .gm-style img {
-            max-width: none;
+
+
+        #wrapper{
+          position: relative;
+          min-width: 1280px;
         }
-    </style>
+    
+        .console{
+          margin-top: 70px;
+          text-align: center;
+        }
+    
+        #debug {
+          position: absolute;
+          width: 450px;
+          padding: 5px;
+          height: 100%;
+          top: 0;
+          right: 0;
+          background: rgba(0, 0, 0, .8);
+          overflow: auto;
+          color: #fff;
+          font-size: 13px;
+          z-index: 10000;
+        }
+    
+        .dida{
+          color: #fff;
+          font-size: 20px;
+          margin-top: 20px;
+        }
+    
+        button, .button {
+          transition: all .4s;
+          display: inline-block;
+          padding: 0px 10px;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          background-color: rgba(248, 248, 248, 0.4);
+          box-shadow: 0 0 4px rgba(0,0,0,0.4);
+          color:#000;
+    
+          border: 1px solid transparent;
+    
+          text-decoration: none;
+          line-height: 30px;
+          margin: 3px;
+          border-radius: 10px;
+        }
+    
+        button:hover, .button:hover {
+          background-color: rgb(0, 0, 0);
+          color: #FFF;
+        }
+    
+        #togglePlay{
+          margin-top: 20px;
+          font-size: 20px;
+          width: 100px;
+          height: 100px;
+          line-height: 70px;
+          border-radius: 100%;
+        }
+    
+        #togglePlay.pause{
+          background-color: rgb(0, 0, 0);
+          color: #fff;
+        }
+    
+        #togglePlay.pause:after{
+          content:"pause"
+        }
+    
+        #togglePlay.play:after{
+          content:"play"
+        }
+    
+        #togglePlay.pause:hover{
+          background-color: #fff;
+          color: #333;
+        }
+    
+        #togglePlay.play{
+          background-color: #fff;
+          color: #333;
+        }
+    
+        #togglePlay.play:hover{
+          background-color: rgb(0, 0, 0);
+          color: #fff;
+        }
+    
+        .goto {
+          position: absolute;
+          left:0;
+          top: 360px;
+          right: 0;
+          margin: auto;
+          text-align: center;
+          width: 100%;
+          height: 50px;
+        }
+    
+        .goto .button{
+          font-size: 30px;
+          font-family: 'Lobster', cursive;
+          padding: 10px;
+          text-transform: none;
+        }
+    
+        #filtersControl{
+          position: absolute;
+          top:0;
+          left: 10px;
+          width: 350px;
+          margin: 30px auto;
+          z-index: 1000;
+        }
+    
+        #changeVideo {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          width: 350px;
+          margin: 30px auto;
+          z-index: 100;
+          padding: 10px;
+          border-radius: 10px;
+          color: #FFFFFF;
+          box-sizing: border-box;
+        }
+    
+        #changeVideo label {
+          padding: 10px;
+          display: block;
+        }
+    
+        #changeVideo input {
+          padding: 10px;
+          display: block;
+          width: 250px;
+          border-radius: 10px;
+          border: none;
+          font-size: 20px;
+          color: #fff;
+          font-weight: 700;
+          background-color: rgba(168, 168, 168, 0.20);
+        }
+    
+        #changeVideo input[type=number] {
+          display: inline-block;
+          width: 100px;
+        }
+    
+        #changeVideo input[type=checkbox] {
+          display: inline-block;
+          width: 20px;
+        }
+    
+        #loadBox{
+          background-color: rgba(168, 168, 168, 0.20);
+          border-radius: 10px;
+          padding: 20px;
+        }
+    
+        /*Slider START *******************************************************************************************/
+    
+        #filterScript {
+          margin-top: 20px;
+          padding: 10px;
+          background-color: rgba(25, 34, 37, 0.35);
+          color: #fff;
+          border-radius: 10px;
+        }
+    
+        .slider {
+          position: relative;
+          width: 100%;
+          height: 25px;
+          border: 0 solid transparent;
+          background-color: rgba(255, 255, 255, 0.20);
+          border-radius: 4px;
+          margin-top: 10px;
+          overflow: hidden;
+        }
+    
+        .slider:hover {
+          background-color: rgba(255, 255, 255, 0.46);
+        }
+    
+        .slider .level {
+          background-color: rgba(255, 255, 255, 0.80);
+          height: 100%;
+          border-right: 5px solid rgba(168, 168, 168, 0.60);
+        }
+    
+        .slider .desc {
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 5px;
+          font-size: 12px;
+          line-height: 18px;
+          color: #222222;
+        }
+    
+        .slider span {
+          font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+          /*text-transform: uppercase;*/
+          position: absolute;
+          top: 0;
+          font-size: 12px;
+          line-height: 18px;
+          color: #222222;
+          padding: 4px;
+          text-align: left;
+          width: 100%;
+          box-sizing: border-box;
+        }
+    
+        /*Slider END ************************************************/
+    
+      </style>
+  
+  <script>
+
+    var myPlayer;
+    jQuery(function () {
+      myPlayer = jQuery("#bgndVideo").YTPlayer({useOnMobile:true, mobileFallbackImage:"assets/mask-4.png"});
+
+      /* DEBUG ******************************************************************************************/
+
+      var YTPConsole = jQuery("#eventListener");
+      // EVENTS: YTPReady YTPStart YTPEnd YTPPlay YTPLoop YTPPause YTPBuffering YTPMuted YTPUnmuted YTPChangeVideo
+      myPlayer.on("YTPReady YTPStart YTPEnd YTPPlay YTPLoop YTPPause YTPBuffering YTPMuted YTPUnmuted YTPChangeVideo", function (e) {
+        YTPConsole.append("event: " + e.type + " (" + jQuery("#bgndVideo").YTPGetPlayer().getPlayerState() + ") > time: " + e.time);
+        YTPConsole.append("<br>");
+      });
+
+      // EVENT: YTPChanged
+      myPlayer.on("YTPChanged", function (e) {
+        YTPConsole.html("");
+      });
+
+      myPlayer.on("YTPChangeVideo", function(e){
+        console.debug("YTPChangeVideo", e);
+
+      });
+
+      // EVENT: YTPData
+      myPlayer.on("YTPData", function (e) {
+        $(".dida").html(e.prop.title + "<br>@" + e.prop.channelTitle);
+        $("#videoData").show();
+
+        YTPConsole.append("******************************");
+        YTPConsole.append("<br>");
+        YTPConsole.append(e.type);
+        YTPConsole.append("<br>");
+        YTPConsole.append(e.prop.title);
+        YTPConsole.append("<br>");
+        YTPConsole.append(e.prop.description.replace(/\n/g, "<br/>"));
+        YTPConsole.append("<br>");
+        YTPConsole.append("******************************");
+        YTPConsole.append("<br>");
+      });
+
+      // EVENT: YTPTime
+      myPlayer.on("YTPTime", function (e) {
+        var currentTime = e.time;
+        var traceLog = currentTime / 5 == Math.floor(currentTime / 5);
+
+        if (traceLog && YTPConsole.is(":visible")) {
+          YTPConsole.append(myPlayer.attr("id")+ " > " + e.type + " > actual time is: " + currentTime);
+          YTPConsole.append("<br>");
+
+          if(myPlayer.YTPGetFilters())
+            console.debug("filters: ", myPlayer.YTPGetFilters());
+        }
+      });
+
+      /* END DEBUG ******************************************************************************************/
+
+      /* FILTER SLIDERS ******************************************************************************************/
+      // create sliders for filters adjustment
+      $(".slider").each(function(){
+        var $slider = $(this);
+        $slider.simpleSlider({
+          initialval: 0, //function (el) {return Math.random() * el.opt.scale},
+          scale     : 100,
+          callback  : function (el) {
+            var filter = $(el).data("filter");
+            myPlayer.YTPApplyFilter(filter, +(el.value).toFixed(0));
+            $("span",el).html(filter + "       (" + (+(el.value).toFixed(0)) + ")");
+            var applFilters = [];
+            var desc = "$(selector).YTPApplyFilters({";
+
+            for (var x=0; x < $(".slider").length; x++ ){
+              var slider = $(".slider").eq(x).get(0);
+              var $slaider = $(slider);
+              if(slider.value)
+                applFilters.push($slaider.data("filter") + ": " + (+(slider.value).toFixed(0)) );
+            };
+
+            for (var y in applFilters){
+              var comma = y < applFilters.length-1 ? "," : "<br>";
+              desc += "<br> &nbsp;&nbsp;&nbsp;" + applFilters[y] + comma;
+            }
+            desc += "})";
+            $("#filterScript").html(desc);
+          }
+        });
+      });
+
+      /* update applied filters */
+      myPlayer.on("YTPFiltersApplied", function(){
+        var filters = myPlayer.get(0).filters;
+
+        for (var key in filters){
+          $(".slider[data-filter="+key+"]").updateSliderVal(filters[key].value);
+        }
+      });
+
+      myPlayer.on("YTPPlay", function(){
+        $("#togglePlay").removeClass("play pause");
+        $("#togglePlay").addClass("pause");
+      });
+
+      myPlayer.on("YTPPause", function(){
+        $("#togglePlay").removeClass("play pause");
+        $("#togglePlay").addClass("play");
+      });
+      /* END FILTER SLIDERS ******************************************************************************************/
+    });
+
+    /**
+     *
+     * @param val
+     * @returns {*|number}
+     */
+    function checkForVal(val){
+      return val || 0;
+    }
+  </script>
+
 
 </head>
 
@@ -91,25 +434,26 @@
 
     </div>
     <header id="header" class="header-wrapper home-parallax home-fade dark-bg header-classic bg-10" style="top: 115.5px;">
-        <div class="mbYTP_wrapper" id="wrapper_mbYTP_videoBackground" style="position: absolute; z-index: 0; min-width: 100%; min-height: 100%; left: 0px; top: 0px; overflow: hidden; opacity: 1; transition-property: opacity; transition-duration: 1000ms;">
-            <iframe id="mbYTP_videoBackground" class="playerBox" style="position: absolute; z-index: 0; width: 1666.12px; height: 811px; top: 0px; left: 0px; overflow: hidden; opacity: 1; margin-top: -155px; margin-left: -201.56px; transition-property: opacity; transition-duration: 1000ms;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/PMBNbYkr5qI"></iframe>
-            <div class="YTPOverlay" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-        </div>
+        <div id="wrapper" style="position:relative; padding:10px 0;z-index:10">   
+            <br>
+            <br>
+            <div class="header-wrapper-inner" style="position: relative;">
+                <div class="container">
+                    <div class="intro" style="opacity: 0.00473934;">
+                        <h1>Christian Talk Show</h1>
+                        <p>Every Tuesday 15:30 (GMT + 4) on Youtube.
+                        </p><a href="#services" class="btn btn-default-o onPageNav">Our Videos</a></div>
+                </div>
+            </div>
+
+            <!--7SnmCUwOsts--><!--BsekcY04xvQ--><!--r1xohS2u69E--><!--Fk9EBOOAYiU--><!--sEuXfDtrco8--><!--9d8wWcJLnFI--><!--Fk9EBOOAYiU--><!-- https://www.youtube.com/watch?v=VHcAusNO3L4&list=RDEMtvEj6XzR7gbh_QCXSzFudw -->
+            <div id="bgndVideo" class="player" data-property="{videoURL:'6Y9SMm5nBns',containment:'body', showControls:true, autoPlay:true, loop:true, vol:50, mute:false, startAt:02, stopAt:250, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:0}" style="display:none;background-image:#000;">My video</div>
+          </div>
+    
         <div id="videoBackground" class="overlay mb_YTPlayer" data-property="{videoURL:&#39;'PMBNbYkr5qI'&#39;,containment:&#39;.header-wrapper&#39;, startAt:29, stopAt:290, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}" style="display:none;background-image:#000;"></div>
-        <div class="video-controls-box">
-            <div class="container">
-                <div class="video-controls"><a id="video-volume" class="fa fa-volume-up" href="#">&nbsp;</a> <a id="video-play" class="fa fa-pause" href="#">&nbsp;</a></div>
-            </div>
-        </div>
+        
         <div class="color-overlay" style="opacity: 1.29526;"></div>
-        <div class="header-wrapper-inner" style="position: relative;">
-            <div class="container">
-                <div class="intro" style="opacity: 0.00473934;">
-                    <h1>Christian Talk Show</h1>
-                    <p>Every Tuesday 15:30 (GMT + 4) on Youtube.
-</p><a href="#services" class="btn btn-default-o onPageNav">Our Videos</a></div>
-            </div>
-        </div>
+      
     </header>
     <section id="about-us" class="section about-us">
         <div class="container">
