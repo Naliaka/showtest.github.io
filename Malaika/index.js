@@ -26,7 +26,7 @@ var language = {
       donatebtn: "¡Dona al proyecto!",
       donateh1: "¡Ayude a mantener este proyecto gratis!",
       donateh2: "Reduzca el tiempo de desarrollo ayudando a nuestros desarrolladores.",
-      chriswdg: "Mariage",
+      chriswdg: "Les mariages",
       tradions: "latradition",
       polytradions: "Traditions-Polygamie",
       HowWeWork: "Comment nous travaillons",
@@ -55,44 +55,44 @@ var language = {
       // remove all hash tags and reload page to default text
       window.location.href = window.location.toString().split(/\?|#/)[0];
     }
-    else if (location.hash.substring(1) === "es") {
-      $("[data-language=setflag]").attr('src', language.es.setflag);
+    else if (location.hash.substring(1) === "fr") {
+      $("[data-language=setflag]").attr('src', language.fr.setflag);
       document.title = language.es.appTitle;
       $("meta[name-description]").attr('content', language.es.appdescrip);
-      $("[data-language=ldwnload]").text(language.es.ldwnload);
-      $("[data-language=ldwnloadwin]").text(language.es.ldwnloadwin);
-      $("[data-language=ldwnloadwin32]").text(language.es.ldwnloadwin32);
-      $("[data-language=ldwnloadmac]").text(language.es.ldwnloadmac);
-      $("[data-language=ldwnloadlin]").text(language.es.ldwnloadlin);
-      $("[data-language=ldwnloadlin64]").text(language.es.ldwnloadlin64);
-      $("[data-language=ldwnloadc]").text(language.es.ldwnloadc);
-      $("[data-language=ldwnloadce]").text(language.es.ldwnloadce);
-      $("[data-language=ldwnloada]").text(language.es.ldwnloada);
-      $("[data-language=ldwnloadjp]").text(language.es.ldwnloadjp);
-      $("[data-language=ldonate]").text(language.es.ldonate);
-      $("[data-language=ldonatepp]").text(language.es.ldonatepp);
-      $("[data-language=ldonatesc]").text(language.es.ldonatesc);
-      $("[data-language=lcontribute]").text(language.es.lcontribute);
-      $("[data-language=lstore]").text(language.es.lstore);
-      $("[data-language=lrun]").text(language.es.lrun);
+      $("[data-language=ldwnvideo]").text(language.fr.ldwnvideo);
+      $("[data-language=topich1]").text(language.fr.topich1);
+      $("[data-language=abouth1]").text(language.fr.abouth1);
+      $("[data-language=aboutush1]").text(language.fr.aboutush1);
+      $("[data-language=christTra]").text(language.fr.christTra);
+      $("[data-language=itime]").text(language.fr.itime);
+      $("[data-language=playvid]").text(language.fr.playvid);
+      $("[data-language=tradions]").text(language.fr.tradions);
+      $("[data-language=polytradions]").text(language.fr.polytradions);
+      $("[data-language=HowWeWork]").text(language.fr.HowWeWork);
+      $("[data-language=Working]").text(language.fr.Working);
+      $("[data-language=Research]").text(language.fr.Research);
+      $("[data-language=Researchp]").text(language.fr.Researchp);
+      $("[data-language=contact]").text(language.fr.contact);
+      $("[data-language=Contactp]").text(language.fr.Contactp);
+      $("[data-language=lrun]").text(language.fr.lrun);
       $("[data-language=lrun]").attr("href", "app/" + location.hash);
-      $("[data-language=intro]").text(language.es.intro);
-      $("[data-language=playvid]").text(language.es.playvid);
+      $("[data-language=intro]").text(language.fr.intro);
+      $("[data-language=playvid]").text(language.fr.playvid);
       window.onload = function() {
-        $("[data-language=vidURL2]").attr('src', language.es.vidURL2);
-        $("[data-language=vidURL1]").attr('href', language.es.vidURL1);
+        $("[data-language=vidURL2]").attr('src', language.fr.vidURL2);
+        $("[data-language=vidURL1]").attr('href', language.fr.vidURL1);
       };
-      $("[data-language=donatebtn]").text(language.es.donatebtn);
-      $("[data-language=donateh1]").text(language.es.donateh1);
-      $("[data-language=donateh2]").text(language.es.donateh2);
-      $("[data-language=appshirt]").text(language.es.appshirt);
-      $("[data-language=wapptsub]").text(language.es.wapptsub);
-      $("[data-language=bapptsub]").text(language.es.bapptsub);
-      $("[data-language=openappt]").text(language.es.openappt);
-      $("[data-language=openapptsub]").text(language.es.openapptsub);
-      $("[data-language=apptdescr]").text(language.es.apptdescr);
-      $("[data-language=buybtn]").text(language.es.buybtn);
-      $("[data-language=revh1]").text(language.es.revh1);
+      $("[data-language=donatebtn]").text(language.fr.donatebtn);
+      $("[data-language=donateh1]").text(language.fr.donateh1);
+      $("[data-language=donateh2]").text(language.fr.donateh2);
+      $("[data-language=appshirt]").text(language.fr.appshirt);
+      $("[data-language=wapptsub]").text(language.fr.wapptsub);
+      $("[data-language=bapptsub]").text(language.fr.bapptsub);
+      $("[data-language=openappt]").text(language.fr.openappt);
+      $("[data-language=openapptsub]").text(language.fr.openapptsub);
+      $("[data-language=apptdescr]").text(language.fr.apptdescr);
+      $("[data-language=buybtn]").text(language.fr.buybtn);
+      $("[data-language=revh1]").text(language.fr.revh1);
       $("[data-language=revh2]").text(language.es.revh2);
       $("[data-language=rev1]").text(language.es.rev1);
       $("[data-language=rev2]").text(language.es.rev2);

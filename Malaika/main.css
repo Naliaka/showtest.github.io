@@ -1,3 +1,6 @@
+@import url(//db.onlinewebfonts.com/c/c9f309b3d47969ecac64a77a6c672594?family=Nexa+Bold);
+@import url(//db.onlinewebfonts.com/c/c9f309b3d47969ecac64a77a6c672594?family=Nexa+Light);
+
 .cta-2 .cta-text,.panel-heading a,h6{
     letter-spacing:1px
 }
@@ -384,11 +387,6 @@ a:focus{
         padding:8px 0 0 15px
     }
 }
-
-
-
-
-
 
 .cta-1 .call-to-action{
     text-align:center;
