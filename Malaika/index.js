@@ -51,7 +51,7 @@ var language = {
   
   
   if (window.location.hash) {
-    if (location.hash.substring(1) === "eng") {
+    if (location.hash.substring(1) === "en") {
       // remove all hash tags and reload page to default text
       window.location.href = window.location.toString().split(/\?|#/)[0];
     }
@@ -109,7 +109,7 @@ var language = {
     //change flag to selected language
     $("[data-language=setflag]").attr('src', $(this).find('img').attr('src'));
     
-    if ($(this).attr('data-callLang') === "eng") {
+    if ($(this).attr('data-callLang') === "en") {
       window.location.href = window.location.toString().split(/\?|#/)[0];
       return false;
     }
