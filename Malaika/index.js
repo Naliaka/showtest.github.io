@@ -35,16 +35,17 @@ var language = {
       Researchp: "Nous commençons par mener des recherches pour comprendre et trouver des moyens d’atteindre les communautés afin d’identifier les problèmes à traiter et de procéder à une analyse conformément à l’Évangile du Christ.Nous commençons par des recherches pour comprendre les moyens de joindre les communautés afin d’identifier les problèmes à traiter, faire l'analyse conformément à l'évangile du christ.",
       Contact: "Contact & amp; Les visites",
       Contactp: "À partir des résultats de la recherche, de l'analyse et de la planification, et en fonction des ressources disponibles, nous envoyons des contacts et des visites, sur invitation et sur demande. À partir des résultats de la recherche, de l'analyse et de la planification, et en fonction des ressources disponibles, nous envoyons des contacts et des visites. , par le biais d'invitations et de demandes.",
-      rev1: "\"En primer lugar manos fuera a ustedes por su esfuerzo y agradable, super herramienta. Buen trabajo WebDGap equipo! Gran esfuerzo y experiencia super de interfaz de usuario. Increíblemente fácil! \"",
-      rev1name: "Mark C.",
-      rev2: "\"Es una aplicación muy sorprendente que me hace hacer aplicaciones de escritorio en 3 minutos (que por lo general se tarda más de 2 horas al menos de mí si lo hice desde cero). Espero tener una biblioteca muy grande y plugins para esta APP gracias de nuevo por tu bonita aplicación \"",
-      rev2name: "Sarah Y.",
-      rev3: "\"A primera vista, se ve como una buena herramienta innovadora. Me gusta el gran enfoque y el tiempo que se dio a la respuesta diseño claro. La aplicación me da más control sobre qué plataformas quiero exportar. Estaré usando esta herramienta para proyectos más serios. Saludos.\"",
-      rev3name: "Jon E.",
-      userbio: "Usuario",
-      madewwebdgap: "Hecho con WebDGap",
-      submitapp: "¡Presente el suyo hoy!",
-      madeby: "Hecho con <span class=\"fa fa-heart\" style=\"col or: #f66;\"></span> y <span class=\"fa fa-coffee\" style=\"color: #52bab3;\"></span> por <a href=\"http://michaelsboost.github.io/\" target=\"_blank\">Michael</a> y otros.",
+      christdonate: "\"Êtes-vous enthousiasmé par l'impact de la malaika sur notre société?\"",
+      buttondonate: "Faites un don aujourd'hui",
+      weekverse: "\"Écritures\"",
+      BIBLEverse: "29 que vous vous absteniez de ce qui a été sacrifié aux idoles et au sang, de ce qui est étranglé et de ce qu’il n’y a pas de chasteté. Si vous vous en abstenez, vous ferez bien. Adieu.",
+      verse: "Actes 15: 28-29",
+      comverse: "Biblia.com",
+      blogverse: "du blog",
+      Articlesverse: "Super articles du blog",
+      julyverse: "juillet",
+      Febverse: "février",
+      Febverse: "Hecho con <span class=\"fa fa-heart\" style=\"col or: #f66;\"></span> y <span class=\"fa fa-coffee\" style=\"color: #52bab3;\"></span> por <a href=\"http://michaelsboost.github.io/\" target=\"_blank\">Michael</a> y otros.",
       "discontinued": "A partir del 13 de abril de 2018, WebDGap ya no es un proyecto activo.<br>Todas las actualizaciones a partir de esa fecha y en adelante son implementaciones basadas exclusivamente en colaboradores."
     }
   };
@@ -74,34 +75,33 @@ var language = {
       $("[data-language=Researchp]").text(language.fr.Researchp);
       $("[data-language=contact]").text(language.fr.contact);
       $("[data-language=Contactp]").text(language.fr.Contactp);
-      $("[data-language=lrun]").text(language.fr.lrun);
-      $("[data-language=lrun]").attr("href", "app/" + location.hash);
-      $("[data-language=intro]").text(language.fr.intro);
+      $("[data-language=christdonate]").text(language.fr.christdonate);
+      $("[data-language=buttondonate]").text(language.fr.buttondonate);
+      $("[data-language=weekverse]").text(language.fr.weekverse);
       $("[data-language=playvid]").text(language.fr.playvid);
       window.onload = function() {
         $("[data-language=vidURL2]").attr('src', language.fr.vidURL2);
         $("[data-language=vidURL1]").attr('href', language.fr.vidURL1);
       };
-      $("[data-language=donatebtn]").text(language.fr.donatebtn);
-      $("[data-language=donateh1]").text(language.fr.donateh1);
-      $("[data-language=donateh2]").text(language.fr.donateh2);
-      $("[data-language=appshirt]").text(language.fr.appshirt);
-      $("[data-language=wapptsub]").text(language.fr.wapptsub);
-      $("[data-language=bapptsub]").text(language.fr.bapptsub);
-      $("[data-language=openappt]").text(language.fr.openappt);
+      $("[data-language=BIBLEverse]").text(language.fr.BIBLEverse);
+      $("[data-language=verse]").text(language.fr.verse);
+      $("[data-language=comverse]").text(language.fr.comverse);
+      $("[data-language= blogverse]").text(language.fr. blogverse);
+      $("[data-language=Articlesverse]").text(language.fr.Articlesverse);
+      $("[data-language=julyverse]").text(language.fr.julyverse);
+      $("[data-language= Febverse]").text(language.fr. Febverse);
       $("[data-language=openapptsub]").text(language.fr.openapptsub);
       $("[data-language=apptdescr]").text(language.fr.apptdescr);
-      $("[data-language=buybtn]").text(language.fr.buybtn);
       $("[data-language=revh1]").text(language.fr.revh1);
-      $("[data-language=revh2]").text(language.es.revh2);
-      $("[data-language=rev1]").text(language.es.rev1);
-      $("[data-language=rev2]").text(language.es.rev2);
-      $("[data-language=rev3]").text(language.es.rev3);
-      $("[data-language=userbio]").text(language.es.userbio);
-      $("[data-language=madewwebdgap]").text(language.es.madewwebdgap);
-      $("[data-language=submitapp]").text(language.es.submitapp);
-      $("[data-language=madeby]").html(language.es.madeby);
-      $("[data-language=discontinued]").html(language.es.discontinued);
+      $("[data-language=revh2]").text(language.fr.revh2);
+      $("[data-language=rev1]").text(language.fr.rev1);
+      $("[data-language=rev2]").text(language.fr.rev2);
+      $("[data-language=rev3]").text(language.fr.rev3);
+      $("[data-language=userbio]").text(language.fr.userbio);
+      $("[data-language=madewwebdgap]").text(language.fr.madewwebdgap);
+      $("[data-language=submitapp]").text(language.fr.submitapp);
+      $("[data-language=madeby]").html(language.fr.madeby);
+      $("[data-language=discontinued]").html(language.fr.discontinued);
     }
   }
   
