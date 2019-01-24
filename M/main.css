@@ -1,6 +1,20 @@
 @import url(//db.onlinewebfonts.com/c/c9f309b3d47969ecac64a77a6c672594?family=Nexa+Bold);
 @import url(//db.onlinewebfonts.com/c/c9f309b3d47969ecac64a77a6c672594?family=Nexa+Light);
 
+
+/* :: Import Fonts */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Work+Sans:300,400,500,600,700");
+/* :: Import All CSS */
+
+@import url(css/animate.css);
+@import url(css/owl.carousel.css);
+@import url(css/magnific-popup.css);
+@import url(css/font-awesome.min.css);
+@import url(css/themify-icons.css);
+/* :: Base CSS */
+
+
+
 .cta-2 .cta-text,.panel-heading a,h6{
     letter-spacing:1px
 }
@@ -2768,3 +2782,9 @@ blockquote p{
   width: 100%;
   height: 100%;
   pointer-events: none; }
+
+
+
+
+
+  
