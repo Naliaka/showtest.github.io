@@ -1,9 +1,7 @@
 /* [ -- Master Stylesheet -- ]
 
 ------------------------------------------------------
-:: Template Name: Magazine Template
 :: Author: Colorlib
-:: Author URL: https://colorlib.com
 :: Version: 1.0.0
 -------------------------------------------------- */
 /* Variables */
@@ -23,7 +21,10 @@
   padding: 0; }
 
 body {
-  font-family: "Nexa Light", sans-serif; }
+  font-family: "Nexa Light", sans-serif;
+  background-color:  #fff2e6;
+ }
+  
 
 .Nexa-fonts {
   font-family: "Nexa Light", sans-serif; }
@@ -41,7 +42,7 @@ h6 {
 p {
   color: #8d8d8d;
   font-size: 14px;
-  line-height: 1.4; }
+  line-height: 1.4; }*
 
 a {
   -webkit-transition-duration: 500ms;
