@@ -87,7 +87,7 @@ http://www.templatemo.com/tm-521-get-ready
   }
 
   .overlay {
-    background: linear-gradient(to top right, #d2b48c, #000000);
+    background: linear-gradient(to top right,rgba(7, 7, 6, 0.746),  #000000);
     opacity: 0.9;
     position: absolute;
     top: 0;
