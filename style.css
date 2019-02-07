@@ -327,6 +327,7 @@ img {
     border-bottom: 1px solid;
     text-transform:uppercase;
     letter-spacing:1px;
+    
     height:auto;
     position: relative;
     -webkit-transition-duration: 500ms;
