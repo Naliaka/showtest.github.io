@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="/font/Nexa Light">
-    <script src="js/jquery.mb.YTPlayer.js"></script>
+   
 
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
@@ -18,26 +18,26 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Style CSS -->
-    <link href="./css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     <meta name="Description" content="Malaika Website">
     <meta name="keywords" content="traditions, christian,Women, Africa">
     <title> Malaika </title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/ionicons.css">
-    <link rel="stylesheet" href="./css/owl.carousel.css">
-    <link rel="stylesheet" href="./css/owl.theme.css">
-    <link rel="stylesheet" href="./css/flexslider.css">
-    <link rel="stylesheet" href="./css/magnific-popup.css">
-    <link rel="stylesheet" href="./css/css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/modernizr.js"></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="./js/common.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="./js/util.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="./js/marker.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="./js/controls.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/util.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/marker.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/controls.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -390,6 +390,7 @@
       return val || 0;
     }
 </script>
+
 </head>
 <body>
     <!-- Preloader Start -->
@@ -432,19 +433,12 @@
                                             <a class="nav-link" href="contact.html">Contact</a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-                                              <img data-language="setflag" src="./images/fr.svg" style="height: 17px;">
-                                               </a>
-                                                <ul class="dropdown-menu" style="min-width: auto; width: auto; padding: 5px 0;">
-                                                    <a class="dropdown-item" href="javascript:void(0)" data-calllang="eng">
-                                                        <img src="./images/en.svg" style="height: 24px;">
-                                                    </a>
-                                                    <br>
-                                                    <a class="dropdown-item" href="javascript:void(0)" data-calllang="fr">
-                                                        <img src="./images/fr.svg" style="height: 24px;">
-                                              </a>
-                                        </ul>
-                                    </li>
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lang</a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="en.html">Eng</a>
+                                                <a class="dropdown-item" href="fr.html">Fr</a>
+                                              </div> 
+                                          </li> 
                                 </ul>
                             <!-- Search Form  -->
                             <div id="search-wrapper">
@@ -708,8 +702,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | MAL
             </div>
         </div>
     </footer>
+    <footer id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p class="copyright text-xs-center">© 2018 Malaika</p>
+                    </div>
+                    <div class="col-md-5 col-sm-4">
+                        <ul class="footer-social-block">
+                            <li><a href="https://business.facebook.com/tv.malaika"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/malaika.tv/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCSwssm5qtj3--ZSMT0JUyqA/videos?fbclid=IwAR1xwfaX16y4OI2vEjBsyX3qski8wzrwGrvAfHhkLwEfvRGGM5ff2CnF2dE"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="footer-menu text-xs-center"><a href="#">Politique de confidentialité</a> | <a>termes&amp;la condition</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     <!-- ***** Footer Area End ***** -->
-
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -720,7 +733,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | MAL
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Active js -->
     <script src="js/owl.carousel.js"></script>
     <script type="text/javascript" src="css/js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
@@ -729,8 +742,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | MAL
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script> 
     <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
-
 </body>
-
 </html>
