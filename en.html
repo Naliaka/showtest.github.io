@@ -18,6 +18,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -62,19 +63,12 @@
                                     <a class="nav-link" href="contact.html">Contact</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-                                      <img data-language="setflag" src="./images/fr.svg" style="height: 17px;">
-                                       </a>
-                                        <ul class="dropdown-menu" style="min-width: auto; width: auto; padding: 5px 0;">
-                                            <a class="dropdown-item" href="javascript:void(0)" data-calllang="eng">
-                                                <img src="./images/en.svg" style="height: 24px;">
-                                            </a>
-                                            <br>
-                                            <a class="dropdown-item" href="javascript:void(0)" data-calllang="fr">
-                                                <img src="./images/fr.svg" style="height: 24px;">
-                                      </a>
-                                </ul>
-                            </li>
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lang</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="en.html">Eng</a>
+                                        <a class="dropdown-item" href="fr.html">Fr</a>
+                                      </div> 
+                                </li> 
                         </ul>
                             <!-- Search Form  -->
                             <div id="search-wrapper">
@@ -2782,9 +2776,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | MAL
     <footer id="footer" class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-4">
-                        <p class="copyright text-xs-center">© 2018 Malaika</p>
-                    </div>
+                        <div class="col-md-3 col-sm-4">
+                                
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    &copy;<script>document.write(new Date().getFullYear());</script> | MALAIKA <a href="http://ctmi.org/en/" target="_blank">CTMI Mauritius</a> 
+       
+       <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            
+                        </div>
                     <div class="col-md-5 col-sm-4">
                         <ul class="footer-social-block">
                             <li><a href="https://business.facebook.com/tv.malaika"><i class="fa fa-facebook"></i></a></li>
@@ -2798,8 +2797,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | MAL
                     </div>
                 </div>
             </div>
-        </footer><a id="totop" href="#totop" style="display: block;"><i class="fa fa-angle-double-up"></i></a>
-    
+        </footer>
     <!-- ***** Footer Area End ***** -->
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
