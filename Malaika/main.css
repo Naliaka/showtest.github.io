@@ -2506,7 +2506,7 @@ blockquote p{
     cursor:pointer
 }
 .gallery .og-close:hover::after,.gallery .og-close:hover::before{
-    background:#333
+    background:#333;
 }
 .gallery .og-close::after{
     -webkit-transform:rotate(-45deg);
@@ -2835,7 +2835,7 @@ blockquote p{
 
   .contact form button:hover,.contact form button:focus{
     background:#663300;
-    color:#fff;
+    color:#333;
     outline:0;
     transition: background-color 2s ease-out;
   }
@@ -2866,12 +2866,77 @@ blockquote p{
   }
 
 
+.single-blog-title .post-cta {
+  margin-bottom: 40px; }
+  .single-blog-title .post-cta a {
+    padding: 0 10px;
+    display: inline-block;
+    height: 20px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-size: 10px;
+    color:   #b35900;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.75px; }
+    .single-blog-title .post-cta a:hover, .single-blog-title .post-cta a:focus {
+      background-color:   #b35900;
+      color: #ffffff; }
+.single-blog-title h3 {
+  color: #ffffff;
+  margin-bottom: 0;
+  font-size: 30px; }
+  @media only screen and (max-width: 767px) {
+    .single-blog-title h3 {
+      font-size: 24px; } }
 
-
-
-
-
-
-
-
-  
+.single-blog-content .post-meta {
+  border-bottom: 2px solid;
+  border-color: #f1f1f1;
+  margin-bottom: 30px; }
+  .single-blog-content .post-meta p {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 10px 0; }
+    .single-blog-content .post-meta p a {
+      font-size: 14px; }
+  .single-blog-content .post-meta.second-part {
+    border-bottom: none;
+    border-top: 2px solid;
+    border-color: #f1f1f1;
+    margin-bottom: 0;
+    margin-top: 30px; }
+.single-blog-content .post-content {
+  padding: 60px 55px;
+  box-shadow: 0 1px 5px rgba(102, 51, 0); }
+  @media only screen and (max-width: 767px) {
+    .single-blog-content .post-content {
+      padding: 30px 25px; } }
+  .single-blog-content .post-content h6 {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #8d8d8d;
+    font-family: "Nexa Light", sans-serif; }
+  .single-blog-content .post-content blockquote {
+    border-left: 2px solid;
+    border-color:   #b35900;
+    padding-left: 30px; }
+    .single-blog-content .post-content blockquote h6 {
+      margin-bottom: 10px;
+      color:  #804000; }
+    .single-blog-content .post-content blockquote p {
+      margin-bottom: 0; }
+  .single-blog-content .post-content .post-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .single-blog-content .post-content .post-tags a {
+      display: block;
+      padding: 0 15px;
+      line-height: 28px;
+      height: 30px;
+      border: 1px solid;
+      border-color: #f1f1f1;
+      margin: 5px; }
