@@ -1,7 +1,7 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBoESjIXpl93vUACpbEUTvMFzoAqrFXGAk",
+    apiKey: "",
     authDomain: "contact-form-9bd61.firebaseapp.com",
     databaseURL: "https://contact-form-9bd61.firebaseio.com",
     projectId: "contact-form-9bd61",
